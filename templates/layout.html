@@ -151,9 +151,15 @@ p {
                 
                 <a href="/" class="navbar-brand">
                   
-<img border="0" alt="Homepage" src="..\static\content\logo.png" width="50" height="50" ></a>
+<img border="0" alt="Homepage" src="..\static\content\logo1.png" width="100" height="100" ></a>
             
-            
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav" style="font-family: 'Orbitron', sans-serif;padding-bottom: 1%;padding-top:1%;">
+    
+      <li><a  href="{{ url_for('about') }}" >Encryption</a></li>
+      <li><a  href="{{ url_for('contact') }}"  style="padding-left: 5%">Decryption</a>
+  </ul>
+</div>     
         
     
 
