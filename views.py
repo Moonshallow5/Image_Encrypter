@@ -45,9 +45,8 @@ def decrypt(key,file):
 
 
 @app.route('/')
-@app.route('/home')
 def home():
-    # Thi tab is just the homepae of the app
+    # This tab is just the homepae of the app
     return render_template(
         'index.html',
         title='Home Page',
@@ -82,7 +81,7 @@ def contact1():
         image=decrypt(key,f.filename)
         return render_template('contact1.html',
         title='Decrypted',
-        message='This is your Decrypted image', name = f.filename) 
+        message='This is your Decrypted image', name = 'dec.jpg') 
 
 @app.route('/about1', methods = ['POST'])  
 def about1():  

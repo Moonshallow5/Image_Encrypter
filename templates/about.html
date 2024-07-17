@@ -3,8 +3,11 @@
 {% block content %}
 <br><br><br><br><br><br>
 
-<div class="typewriter">
+
+<div class="start">
 <h2>{{ title }}</h2>
+</div>
+<div class="typewriter">
 <h3>{{ message }}</h3>
 <br><br>
 </div>
@@ -12,10 +15,10 @@
     <div class="center1">
         <form action="/about1" method="post" enctype="multipart/form-data">
         <input style="text-align: center; padding-left: 500px;" type="file" name="file" />
-        <br><br>
+        <br>
         <input style="text-align: center;" type="submit" value="Upload" >
     </div>
-    <br><br><br><br><br>
+    
 
     </div>
     {% endblock %}

@@ -116,6 +116,13 @@
     font-family: 'Times New Roman', cursive;
     font-size: 60px;
 }
+.start h2 {
+    text-align: center;
+    font-family: 'Times New Roman', cursive;
+    font-size: 50px;
+    color: aqua;
+}
+
 /*
 
 @keyframes typing {
@@ -138,7 +145,7 @@ h3 {
 }
 body{
             background-color: black;
-            color: #2bff00; /* the whole ody colour */
+            color: green; /* the whole body colour */
         }
 p {
     color: white;
@@ -149,15 +156,15 @@ p {
     
         
                 
-                <a href="/" class="navbar-brand">
+<a href="/" class="navbar-brand">
                   
 <img border="0" alt="Homepage" src="..\static\content\logo1.png" width="100" height="100" ></a>
             
 <div class="navbar-collapse collapse">
-  <ul class="nav navbar-nav" style="font-family: 'Orbitron', sans-serif;padding-bottom: 1%;padding-top:1%;">
+  <ul class="nav navbar-nav" style="font-family: 'Orbitron', sans-serif;padding-bottom: 1%;padding-top:35px; font-size: 20px;">
     
       <li><a  href="{{ url_for('about') }}" >Encryption</a></li>
-      <li><a  href="{{ url_for('contact') }}"  style="padding-left: 5%">Decryption</a>
+      <li><a  href="{{ url_for('contact') }}"  style="padding-left: 7%">Decryption</a>
   </ul>
 </div>     
         
@@ -165,11 +172,14 @@ p {
 
     <div class="container body-content">
         {% block content %}{% endblock %}
+        </div>
+        <!--
         <hr />
         <footer>
             <marquee scrollamount="10"><p>&copy; {{ year }} - Image Encrypter</p></marquee>
         </footer>
     </div>
+  -->
 
     <!--<script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
