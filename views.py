@@ -52,26 +52,26 @@ def home():
         title='Home Page',
     )
 
-@app.route('/contact')
-def contact():
+@app.route('/decryption')
+def decryption():
     #This tab is for decrypting the image (comes in second)
     return render_template(
-        'contact.html',
+        'de.html',
         title='Decrypt',
         message='Please upload your encrypted image along with the key'
     )
 
-@app.route('/about')
-def about():
+@app.route('/encryption')
+def encryption():
     # This tab is for encrypting the image (comes in first)
     return render_template(
-        'about.html',
+        'en.html',
         title='Encrypt',
         message='Upload the image here'
     )
 
-@app.route('/contact1', methods = ['POST'])  
-def contact1():  
+@app.route('/decryption1', methods = ['POST'])  
+def decryption1():  
     if request.method == 'POST':  
         global f
         f = request.files['file']  # Requests for the encrypted file and the key
@@ -79,18 +79,18 @@ def contact1():
         text = request.form['key']
         key=int(text)
         image=decrypt(key,f.filename)
-        return render_template('contact1.html',
+        return render_template('de1.html',
         title='Decrypted',
         message='This is your Decrypted image', name = 'dec.jpg') 
 
-@app.route('/about1', methods = ['POST'])  
-def about1():  
+@app.route('/encryption1', methods = ['POST'])  
+def encryption1():  
     if request.method == 'POST':  
         global f
         f = request.files['file']  
         f.save(f.filename)  
         key,image=encrypt(f.filename) # Requests for a normal image file, encrypts it and provides the key
-        return render_template('about1.html',
+        return render_template('en1.html',
         title='Encrypted',
         message='This is your encrypted image', name = f.filename,keys=key,images=image)
 
