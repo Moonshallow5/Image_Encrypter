@@ -38,5 +38,4 @@ Then go to ```http://localhost:5000/``` to see my project :)
 Don't forget to ⭐ the repo if it helped you :)
 
 
-docker run -d -p 5000:5000 -v C:/Users/Sandeep/OneDrive/Desktop/UNI-IMPORTANT-WORK/Image_Encrypter/:/app/ image-encrypter-app
 
